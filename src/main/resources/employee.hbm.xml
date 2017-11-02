@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+<!-- 
+create table EMPLOYEE (
+   id INT NOT NULL auto_increment,
+   first_name VARCHAR(20) default NULL,
+   last_name  VARCHAR(20) default NULL,
+   salary     INT  default NULL,
+   PRIMARY KEY (id)
+); 
+-->
+
+
+ <hibernate-mapping>  
+  <class name="hibernate.Employee" table="EMPTABLE">  
+    <id name="id">  
+     <generator class="assigned"></generator>  
+    </id>  
+    <property name="firstName"></property>  
+    <property name="lastName"></property>  
+            
+  </class>  
+    <class name="hibernate.Emp">  
+    <id name="id">  
+     <generator class="native"></generator>  
+    </id>  
+    <property name="firstName" type = "string"></property>  
+    <property name="lastName" type = "string"></property> 
+    <property name="salary" type = "int"></property>
+  </class>
+ 
+    <class name="hibernate.entity.Employee">  
+    <id name="id">  
+     <generator class="native"></generator>  
+    </id>  
+    <property name="firstName" type = "string"></property>  
+    <property name="lastName" type = "string"></property> 
+  </class>
+            
+ </hibernate-mapping>  
